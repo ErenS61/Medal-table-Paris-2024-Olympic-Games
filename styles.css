@@ -193,7 +193,7 @@ tbody tr:hover {
     }
 }
 
-/* Media Queries pour les écrans de taille moyenne (tablettes) */
+/* Media Queries pour les écrans de taille moyenne (tablettes en mode portrait) */
 @media (min-width: 601px) and (max-width: 1024px) {
     .header {
         flex-direction: row;
@@ -212,6 +212,40 @@ tbody tr:hover {
 
     .title-paris {
         font-size: 3rem;
+    }
+
+    table {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries pour les tablettes en mode paysage */
+@media (orientation: landscape) and (min-width: 601px) and (max-width: 1024px) {
+    .header {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .title-image-left, .title-image-right {
+        width: 120px;
+    }
+
+    .title-main {
+        font-size: 2.2rem;
+    }
+
+    .title-paris {
+        font-size: 3.2rem;
     }
 
     table {
