@@ -160,7 +160,7 @@ tbody tr:hover {
     }
 
     .title-image-left, .title-image-right {
-        position: static;
+        position: absolute;
         margin: 10px auto;
         display: block;
     }
