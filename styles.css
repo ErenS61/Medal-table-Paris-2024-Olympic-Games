@@ -77,11 +77,6 @@ th, td {
 th {
     background-color: #4CAF50;
     color: #fff;
-    font-family: Arial, sans-serif; /* Utilise Arial pour les en-têtes de colonnes */
-}
-
-td {
-    font-family: 'Paris2024 Semibold', sans-serif; /* Utilise Paris2024 Semibold pour les cellules du tableau */
 }
 
 td:nth-child(1), th:nth-child(1) {
