@@ -148,7 +148,6 @@ tbody tr:hover {
     font-size: 1.2rem; /* Vous pouvez ajuster cette valeur selon vos besoins */
 }
 
-
 /* Media Queries pour les petits écrans (téléphones) */
 @media (max-width: 600px) {
     body {
@@ -234,18 +233,30 @@ tbody tr:hover {
     .header {
         flex-direction: row;
         text-align: center;
+        margin: 20px;
     }
 
-    .title-image-left, .title-image-right {
-        width: 100px;
+    .title-image-left {
+        position: absolute;
+        top: 20px; /* Ajuste pour plus d'espace au-dessus du texte */
+        left: 10px; /* Réduit la marge à gauche */
+        width: 120px; /* Réduit la largeur pour éviter les chevauchements */
+    }
+
+    .title-image-right {
+        position: absolute;
+        top: 20px;
+        right: 10px; /* Réduit la marge à droite */
+        width: 100px; /* Réduit la largeur pour éviter les chevauchements */
     }
 
     .title-main {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        margin: 0; /* Ajuste la marge pour mieux s'adapter */
     }
 
     .title-paris {
-        font-size: 3.2rem;
+        font-size: 3rem;
     }
 
     table {
