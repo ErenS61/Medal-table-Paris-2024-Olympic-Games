@@ -2,15 +2,19 @@
 
 /* Déclaration de la police avec @font-face */
 @font-face {
-    font-family: 'Paris2024 Semibold';
-    src: url('fonts/Paris2024-Semibold.woff2') format('woff2'),
-         url('fonts/Paris2024-Semibold.woff') format('woff');
+    font-family: "Paris2024 Semibold";
+    src: url("https://db.onlinewebfonts.com/t/b84eb26a3af45db5af2689f71b93b580.eot");
+    src: url("https://db.onlinewebfonts.com/t/b84eb26a3af45db5af2689f71b93b580.eot?#iefix") format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/b84eb26a3af45db5af2689f71b93b580.woff2") format("woff2"),
+         url("https://db.onlinewebfonts.com/t/b84eb26a3af45db5af2689f71b93b580.woff") format("woff"),
+         url("https://db.onlinewebfonts.com/t/b84eb26a3af45db5af2689f71b93b580.ttf") format("truetype"),
+         url("https://db.onlinewebfonts.com/t/b84eb26a3af45db5af2689f71b93b580.svg#Paris2024 Semibold") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Paris2024 Semibold', Arial, sans-serif;
     margin: 20px;
     background-color: #f4f4f4;
     position: relative; /* Nécessaire pour positionner les images en absolu par rapport au corps */
@@ -144,3 +148,107 @@ tbody tr:hover {
     font-size: 1.2rem; /* Vous pouvez ajuster cette valeur selon vos besoins */
 }
 
+
+/* Media Queries pour les petits écrans (téléphones) */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+    
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title-image-left, .title-image-right {
+        position: static;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .title-main {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .title-paris {
+        font-size: 2.5rem;
+    }
+
+    table {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+    
+    .footer {
+        font-size: 0.8rem;
+        padding: 5px;
+        bottom: 5px;
+        right: 5px;
+    }
+}
+
+/* Media Queries pour les écrans de taille moyenne (tablettes) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .title-image-left, .title-image-right {
+        position: static;
+        width: 100px;
+        height: auto;
+    }
+
+    .title-main {
+        font-size: 2rem;
+    }
+
+    .title-paris {
+        font-size: 3rem;
+    }
+
+    table {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries pour les grands écrans (ordinateurs de bureau) */
+@media (min-width: 1025px) {
+    .title-main {
+        font-size: 2.5rem;
+    }
+
+    .title-paris {
+        font-size: 4rem;
+    }
+
+    table {
+        width: 80%;
+    }
+
+    th, td {
+        padding: 12px;
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
