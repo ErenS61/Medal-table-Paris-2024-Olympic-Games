@@ -178,6 +178,6 @@ tbody tr:hover {
     }
 
     .total-medals, .country-name, .rank-number, .gold-medals, .silver-medals, .bronze-medals {
-        font-size: -25vh;
+        font-size: 50vh;
     }
 }
