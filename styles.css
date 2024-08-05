@@ -153,19 +153,19 @@ tbody tr:hover {
     }
 
     .title-main {
-        font-size: 4vw;
+        font-size: 2vw;
     }
 
     .title-image-left {
-        width: 20vw;
+        width: 10vw;
     }
 
     .title-image-right {
-        width: 15vw;
+        width: 7.5vw;
     }
 
     .title-paris {
-        font-size: 6vw;
+        font-size: 3vw;
     }
 
     th, td {
