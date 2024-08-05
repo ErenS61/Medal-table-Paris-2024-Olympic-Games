@@ -147,7 +147,7 @@ tbody tr:hover {
 }
 
 /* Media query pour les grands écrans */
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 3840px) {
     body {
         font-size: 1.5vw; /* Utilisation de vw pour que la taille de police s'adapte à la largeur de l'écran */
     }
