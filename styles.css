@@ -149,11 +149,11 @@ tbody tr:hover {
 /* Media query pour les grands écrans */
 @media screen and (min-width: 3840px) {
     body {
-        font-size: -25vh; /* Utilisation de vw pour que la taille de police s'adapte à la largeur de l'écran */
+        font-size: 61vh; /* Utilisation de vw pour que la taille de police s'adapte à la largeur de l'écran */
     }
 
     .title-main {
-        font-size: -25vh;
+        font-size: 50vh;
     }
 
     .title-image-left {
@@ -165,16 +165,16 @@ tbody tr:hover {
     }
 
     .title-paris {
-        font-size: 3vh;
+        font-size: 47vh;
     }
 
     th, td {
-        padding: -25vh;
-        font-size: -25vh;
+        padding: 33vh;
+        font-size: 34vh;
     }
 
     .footer {
-        font-size: -25vh;
+        font-size: 40vh;
     }
 
     .total-medals, .country-name, .rank-number, .gold-medals, .silver-medals, .bronze-medals {
