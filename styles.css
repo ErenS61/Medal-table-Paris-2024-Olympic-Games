@@ -145,26 +145,3 @@ tbody tr:hover {
     font-family: 'Paris2024 Semibold', sans-serif;
     font-size: 1.2rem; /* Vous pouvez ajuster cette valeur selon vos besoins */
 }
-
-/* Media Queries pour les petits écrans (téléphones) */
-@media (max-width: 600px) {
-    .title-main {
-        font-size: 1.5rem;
-    }
-
-    .title-paris {
-        font-size: 2.5rem;
-    }
-
-    .title-image-left, .title-image-right {
-        width: 100px;
-    }
-
-    table {
-        width: 100%;
-    }
-
-    td, th {
-        padding: 8px;
-    }
-}
