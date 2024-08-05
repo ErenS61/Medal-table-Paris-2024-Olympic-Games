@@ -145,3 +145,39 @@ tbody tr:hover {
     font-family: 'Paris2024 Semibold', sans-serif;
     font-size: 1.2rem; /* Vous pouvez ajuster cette valeur selon vos besoins */
 }
+
+/* Media query pour les grands écrans */
+@media screen and (min-width: 1920px) {
+    body {
+        font-size: 1.5vw; /* Utilisation de vw pour que la taille de police s'adapte à la largeur de l'écran */
+    }
+
+    .title-main {
+        font-size: 4vw;
+    }
+
+    .title-image-left {
+        width: 20vw;
+    }
+
+    .title-image-right {
+        width: 15vw;
+    }
+
+    .title-paris {
+        font-size: 6vw;
+    }
+
+    th, td {
+        padding: 1.5vw;
+        font-size: 1.5vw;
+    }
+
+    .footer {
+        font-size: 1.5vw;
+    }
+
+    .total-medals, .country-name, .rank-number, .gold-medals, .silver-medals, .bronze-medals {
+        font-size: 1.5vw;
+    }
+}
