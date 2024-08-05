@@ -169,15 +169,15 @@ tbody tr:hover {
     }
 
     th, td {
-        padding: 33vh;
-        font-size: 34vh;
+        padding: 330vh;
+        font-size: 313vh;
     }
 
     .footer {
-        font-size: 40vh;
+        font-size: 150vh;
     }
 
     .total-medals, .country-name, .rank-number, .gold-medals, .silver-medals, .bronze-medals {
-        font-size: 50vh;
+        font-size: 234vh;
     }
 }
