@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const nocToIso = {
+        // Mappez les codes NOC des pays avec les codes ISO pour les drapeaux
         "AFG": "af", "ALB": "al", "ALG": "dz", "AND": "ad", "ANG": "ao", "ANT": "ag",
         "ARG": "ar", "ARM": "am", "ARU": "aw", "ASA": "as", "AUS": "au", "AUT": "at",
         "AZE": "az", "BAH": "bs", "BAN": "bd", "BAR": "bb", "BDI": "bi", "BEL": "be",
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "TUV": "tv", "UAE": "ae", "UGA": "ug", "UKR": "ua", "URU": "uy", "USA": "us",
         "UZB": "uz", "VAN": "vu", "VEN": "ve", "VIE": "vn", "VIN": "vc", "YEM": "ye",
         "ZAM": "zm", "ZIM": "zw"
+        // Ajoutez d'autres pays selon vos besoins
     };
 
     fetch('https://sph-i-api.olympics.com/summer/info/api/FRA/widgets/medals-table')
