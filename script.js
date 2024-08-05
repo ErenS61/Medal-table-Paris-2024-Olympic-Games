@@ -36,35 +36,40 @@ document.addEventListener('DOMContentLoaded', () => {
         "TUV": "tv", "UAE": "ae", "UGA": "ug", "UKR": "ua", "URU": "uy", "USA": "us",
         "UZB": "uz", "VAN": "vu", "VEN": "ve", "VIE": "vn", "VIN": "vc", "YEM": "ye",
         "ZAM": "zm", "ZIM": "zw"
-        // Ajoutez d'autres pays selon vos besoins
     };
 
     fetch('https://sph-i-api.olympics.com/summer/info/api/FRA/widgets/medals-table')
-                .then(response => response.json())
-                .then(data => {
-                    const tableBody = document.getElementById('medals-table-body');
-                    data.medalsTable.slice(0, 10).forEach((country) => {
-                        const isoCode = nocToIso[country.noc] || country.noc.toLowerCase();
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td class="rank-number">${country.rank}</td>
-                            <td><img src="https://flagcdn.com/w40/${isoCode}.png" alt="Drapeau de ${country.description}"></td>
-                            <td class="country-name">${country.description}</td>
-                            <td class="gold-medals">${country.gold}</td>
-                            <td class="silver-medals">${country.silver}</td>
-                            <td class="bronze-medals">${country.bronze}</td>
-                            <td class="total-medals">${country.total}</td>
-                        `;
-                        tableBody.appendChild(row);
-                    });
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById('medals-table-body');
+            tableBody.innerHTML = ''; // Réinitialise le contenu du tableau avant d'ajouter de nouvelles lignes
+            data.medalsTable.slice(0, 10).forEach((country) => {
+                const isoCode = nocToIso[country.noc] || country.noc.toLowerCase();
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="rank-number">${country.rank}</td>
+                    <td><img src="https://flagcdn.com/w40/${isoCode}.png" alt="Drapeau de ${country.description}"></td>
+                    <td class="country-name">${country.description}</td>
+                    <td class="gold-medals">${country.gold}</td>
+                    <td class="silver-medals">${country.silver}</td>
+                    <td class="bronze-medals">${country.bronze}</td>
+                    <td class="total-medals">${country.total}</td>
+                `;
+                tableBody.appendChild(row);
+            });
 
-                    const updateElement = document.getElementById('last-updated');
-                    const now = new Date();
-                    const dateOptions = { day: '2-digit', month: '2-digit', year: 'numeric' };
-                    const timeOptions = { hour: '2-digit', minute: '2-digit' };
-                    const formattedDate = now.toLocaleDateString('fr-FR', dateOptions);
-                    const formattedTime = now.toLocaleTimeString('fr-FR', timeOptions);
-                    updateElement.textContent = `Dernière mise à jour : ${formattedDate} à ${formattedTime}`;
-                })
-                .catch(error => console.error('Erreur lors de la récupération des données :', error));
-        });
+            const updateElement = document.getElementById('last-updated');
+            const now = new Date();
+            const dateOptions = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            const timeOptions = { hour: '2-digit', minute: '2-digit' };
+            const formattedDate = now.toLocaleDateString('fr-FR', dateOptions);
+            const formattedTime = now.toLocaleTimeString('fr-FR', timeOptions);
+            updateElement.textContent = `Dernière mise à jour : ${formattedDate} à ${formattedTime}`;
+        })
+        .catch(error => console.error('Erreur lors de la récupération des données :', error));
+
+    // Rafraîchissement automatique toutes les 60 secondes
+    setInterval(() => {
+        window.location.reload();
+    }, 60000); // 60000 millisecondes = 60 secondes
+});
