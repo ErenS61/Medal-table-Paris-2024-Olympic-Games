@@ -127,7 +127,7 @@ tbody tr:hover {
     font-family: 'Paris2024 Semibold', sans-serif; /* Applique la police de caractère */
     font-size: 0.9rem;
     color: #333; /* Couleur du texte */
-    text-align: right;
+    text-align: center;
 }
 
 /* Ajout d'une marge spécifique pour le texte d'update */
