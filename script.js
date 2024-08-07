@@ -71,5 +71,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Rafraîchissement automatique toutes les 60 secondes
     setInterval(() => {
         window.location.reload();
-    }, 15000); // 60000 millisecondes = 60 secondes
+    }, 60000); // 60000 millisecondes = 60 secondes
 });
