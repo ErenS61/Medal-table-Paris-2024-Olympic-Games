@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "PAN": "pa", "PAR": "py", "PER": "pe", "PHI": "ph", "PLE": "ps", "PLW": "pw",
         "PNG": "pg", "POL": "pl", "POR": "pt", "PRK": "kp", "PUR": "pr", "QAT": "qa",
         "ROU": "ro", "RSA": "za", "RUS": "ru", "RWA": "rw", "SAM": "ws", "SEN": "sn",
-        "SEY": "sc", "SIN": "sg", "SKN": "kn", "SLE": "sl", "SLO": "si", "SMR": "sm",
-        "SOL": "sb", "SOM": "so", "SRB": "rs", "SRI": "lk", "SSD": "ss", "STP": "st",
-        "SUD": "sd", "SUI": "ch", "SUR": "sr", "SVK": "sk", "SWE": "se", "SWZ": "sz",
-        "SYR": "sy", "TAN": "tz", "TGA": "to", "THA": "th", "TJK": "tj", "TKM": "tm",
-        "TLS": "tl", "TOG": "tg", "TPE": "tw", "TTO": "tt", "TUN": "tn", "TUR": "tr",
-        "TUV": "tv", "UAE": "ae", "UGA": "ug", "UKR": "ua", "URU": "uy", "USA": "us",
-        "UZB": "uz", "VAN": "vu", "VEN": "ve", "VIE": "vn", "VIN": "vc", "YEM": "ye",
-        "ZAM": "zm", "ZIM": "zw"
+        "SEY": "sc", "SGP": "sg", "SIN": "sg", "SKN": "kn", "SLE": "sl", "SLO": "si",
+        "SMR": "sm", "SOL": "sb", "SOM": "so", "SRB": "rs", "SRI": "lk", "SSD": "ss",
+        "STP": "st", "SUD": "sd", "SUI": "ch", "SUR": "sr", "SVK": "sk", "SWE": "se",
+        "SWZ": "sz", "SYR": "sy", "TAN": "tz", "TGA": "to", "THA": "th", "TJK": "tj",
+        "TKM": "tm", "TLS": "tl", "TOG": "tg", "TPE": "tw", "TTO": "tt", "TUN": "tn",
+        "TUR": "tr", "TUV": "tv", "UAE": "ae", "UGA": "ug", "UKR": "ua", "URU": "uy",
+        "USA": "us", "UZB": "uz", "VAN": "vu", "VEN": "ve", "VIE": "vn", "VIN": "vc",
+        "YEM": "ye", "ZAM": "zm", "ZIM": "zw"
     };
 
     fetch('https://sph-i-api.olympics.com/summer/info/api/FRA/widgets/medals-table')
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const tableBody = document.getElementById('medals-table-body');
             tableBody.innerHTML = ''; // Réinitialise le contenu du tableau avant d'ajouter de nouvelles lignes
-            data.medalsTable.slice(0, 10).forEach((country) => {
+            data.medalsTable.slice(0, 100).forEach((country) => {
                 const isoCode = nocToIso[country.noc] || country.noc.toLowerCase();
                 const row = document.createElement('tr');
                 row.innerHTML = `
